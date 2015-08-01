@@ -1,0 +1,61 @@
+<!--
+	Title: Basic Calculator with AngularJs
+	Author: Ruel O. Cabaluna Jr.
+	Section: MUST BSIT-4R3
+	Date: August 2, 2015
+-->
+
+<!DOCTYPE html>
+<html lang="en" data-ng-app="Calculator">
+<head>
+	<meta charset="UTF-8">
+	<title>Calculator - AngularJS</title>
+	<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-ng-controller="mainController">
+	<div class="calculator">
+		<form>
+			<div class="calculator-display">
+				<input type="text" class="calculator-display-input" data-ng-model="output" readonly>
+			</div>
+			<div class="buttons">
+
+				<p class="buttonsRow">
+					<input type="button" class="calc-button calc-button-gray" value="CA" data-ng-click="clearAll()">
+					<input type="button" class="calc-button" disabled>
+					<input type="button" class="calc-button calc-button-gray"value="CE" data-ng-click="clearEntry()">	
+					<input type="button" class="calc-button calc-button-red calc-button-big" value="÷" data-ng-click="buttonClick('/')">
+				</p>
+				<p class="buttonsRow">
+					<input type="button" class="calc-button" value="7" data-ng-click="buttonClick(7)">
+					<input type="button" class="calc-button" value="8" data-ng-click="buttonClick(8)">
+					<input type="button" class="calc-button" value="9" data-ng-click="buttonClick(9)">
+					<input type="button" class="calc-button calc-button-red calc-button-big" value="x" data-ng-click="buttonClick('*')">
+				</p>
+				<p class="buttonsRow">
+					<input type="button" class="calc-button" value="4" data-ng-click="buttonClick(4)">	
+					<input type="button" class="calc-button" value="5" data-ng-click="buttonClick(5)">	
+					<input type="button" class="calc-button" value="6" data-ng-click="buttonClick(6)">
+					<input type="button" class="calc-button calc-button-red calc-button-big" value="-" data-ng-click="buttonClick('-')">
+				</p>
+				<p class="buttonsRow">
+					<input type="button" class="calc-button" value="1" data-ng-click="buttonClick(1)">
+					<input type="button" class="calc-button" value="2" data-ng-click="buttonClick(2)">	
+					<input type="button" class="calc-button" value="3" data-ng-click="buttonClick(3)">
+					<input type="button" class="calc-button calc-button-red calc-button-big" value="+" data-ng-click="buttonClick('+')">	
+				</p>
+				<p class="buttonsRow">
+					<input type="button" class="calc-button" value="0" data-ng-click="buttonClick(0)">
+					<input type="button" class="calc-button" disabled>
+					<input type="button" class="calc-button" value="." data-ng-click="buttonClick('.')">
+					<input type="button" class="calc-button calc-button-yellow calc-button-big" value="=" data-ng-click="calculate()">
+					
+				</p>
+			</div>	
+		</form>
+	</div>
+
+	<script src="assets/js/angular.min.js"></script>
+	<script src="assets/js/controller.js"></script>
+</body>
+</html>
